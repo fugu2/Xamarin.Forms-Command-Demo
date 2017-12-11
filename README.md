@@ -1,7 +1,14 @@
 # Xamarin.Forms: Using Commands Demo
 
-To make things easier for beginners, this is a demo on using commands in Xamarin.Forms.
+To make things easier for beginners, this will be a demo on using commands in Xamarin.Forms.
 
-The set-up comes as a PCL.
+It comes as a standard out-of-the-box PCL.
 
-Please feel free to comment.
+Any comment is appreciated.
+
+`<sample code
+
+public CommandDemoPage()
+        {
+            InitializeComponent();
+        }>` 
