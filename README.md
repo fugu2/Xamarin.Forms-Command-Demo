@@ -6,9 +6,4 @@ It comes as a standard out-of-the-box PCL.
 
 Any comment is appreciated.
 
-`<sample code
-
-public CommandDemoPage()
-        {
-            InitializeComponent();
-        }>` 
+Inline `code` has `back-ticks around` it.
