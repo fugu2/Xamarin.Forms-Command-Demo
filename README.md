@@ -1,21 +1,38 @@
-# Xamarin.Forms MVVM: Using Commands Demo
+# Xamarin.Forms: Using Commands Demo
 
-Commands demo for beginners using MVVM in Xamarin.Forms, here as an out-of-the-box PCL.
+To make things easier for beginners getting used to MVVM in Xamarin, this is a demo on using commands. The set-up comes as an out-of-the-box PCL.
 
-Any comment is appreciated.
-
-#### Set up a button in your view xaml class
-
+### Button in page xaml class
 ```xml
-<Button x:Name="Test Button" 
+<Button x:Name="TestButton"        
         Command="{Binding ButtonCommand}" 
         Text="Click"  
         VerticalOptions="Center" 
         HorizontalOptions="Center" />
 ```
 
-#### Set up a button in your view xaml class
+### Set the binding context in the page xaml.cs
 ```csharp
-sample code over several
-lines
+    ViewModel viewModel;
+
+    public CommandDemoPage()
+    {
+        InitializeComponent();
+        viewModel = new ViewModel();
+        BindingContext = viewModel;
+    }
+```
+
+### Set up the command and the method to execute in the ViewModel
+```csharp
+    public ICommand ButtonCommand { get; private set; }
+    public ViewModel()
+    {
+        ButtonCommand = new Command(ButtonCommandMethod);
+    }
+
+    public void ButtonCommandMethod() 
+    {
+        App.Current.MainPage.DisplayAlert("Alert", "This is an alert", "Ok");
+    } 
 ```
