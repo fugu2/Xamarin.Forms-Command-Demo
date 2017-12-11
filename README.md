@@ -6,4 +6,5 @@ It comes as a standard out-of-the-box PCL.
 
 Any comment is appreciated.
 
-Inline `code` has `back-ticks around` it.
+```sample code over several 
+lines```
